@@ -1,0 +1,20 @@
+
+
+body {
+    background-color: #6f9e80;
+    margin: 0;
+    font-family: sans-serif;
+  }
+  
+  .map{
+    height: 200px;
+    padding: 20px;
+    background-image: url('/static/sber/task_8/map.jpeg');
+    background-position: bottom;
+    background-size: 20% 100%;
+    margin-bottom: 100px;
+  }
+  
+  .mario{
+    width: 50px;
+  }
