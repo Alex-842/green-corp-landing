@@ -3,6 +3,10 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    background-color: #fff;
   }
 body {
     font-family: 'Raleway', sans-serif;
@@ -39,7 +43,13 @@ button {
 .about__sun-image {
     width: 100px;
     height: 100px;
-    margin-bottom: 250px;
+    /* margin-bottom: 250px; */
+    animation-name: rotation;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    position: absolute;
+    /* top: -200px; */
   }
 .about {
     display: flex;
@@ -147,11 +157,17 @@ footer{
   font-size: 16px;
   font-weight: 600;
 }
-.footer__container .footer__group{
+.footer__container {
   display: flex;
+  justify-content: center;
 }
-/* .footer__group{
+.footer__group{ 
   margin-right: 80px;
+}
+footer h3 {
+  opacity: 0.7;
+  font-size: 16px;
+  margin-bottom: 30px;
 }
 .footer__copyright{
   margin-top: 40px;
@@ -160,8 +176,17 @@ footer{
 }
 .footer__links{
   display: flex;
-  flex-direction: column
+  flex-direction: column;
 }
 .footer__links a{
-  margin-bottom: 15px; */
-/* }
+  margin-bottom: 15px;
+}
+@keyframes rotation{
+  0%{
+    transform: rotate(0deg);
+  }
+
+  100%{
+    transform: rotate(360deg);
+  }
+}
